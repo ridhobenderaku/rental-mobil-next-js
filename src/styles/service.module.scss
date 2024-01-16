@@ -1,0 +1,189 @@
+@use "@/styles/mixins" as *;
+
+.container {
+  width: 100%;
+  padding: 5.16rem 0;
+  background-color: #FFFFFF;
+}
+
+  
+  
+  /* Float four columns side by side */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding in columns */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+.Unit-container {
+  width: 94%;
+  margin: 0 auto;
+  display: flex ;
+  flex-direction: column;
+//   gap: 2rem;
+}
+
+.left-content {
+  display: flex;
+  width: 50%;
+  flex-wrap: wrap;
+  font-size: 18px;
+  line-height: 22px;
+  .content-header {
+    font-style: normal;
+    font-weight: 700 bold;
+    font-size: 2.33em;
+    line-height: 1.5em;
+    color: #0c0c0c;
+  }
+
+  .content-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2em;
+    flex-wrap: wrap;
+    line-height: 1.5em;
+    text-align: justify;
+    letter-spacing: 0.03em;
+    color: #0c0c0c;
+  }
+
+  .content-description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1.5em;
+    color: #464646;
+  }
+
+  span {
+    color: #F88C34;
+  }
+}
+
+.right-content {
+  display: flex;
+  width: 50%;
+  flex-wrap: wrap;
+  gap: 0.833rem;
+  justify-content: center;
+}
+.wrapper {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    gap: 40px;
+    display : grid;
+    grid-template-columns: repeat(5,1fr) ;
+  }
+
+.card-image{
+  width: 100%;
+  aspect-ratio: 1/1;
+    position: relative;
+    overflow: hidden;
+}
+.card-image > img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: fill;
+}
+
+
+
+@include respond(extraSmall) {
+  .service-container {
+    width: 90%;
+    flex-direction: column;
+  }
+  .wrapper {
+    width: 90%;
+    grid-template-columns: repeat(3,1fr) ;
+  }
+  .left-content {
+    width: 100%;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .right-content {
+    width: 100%;
+  }
+
+  .box-wrapper {
+    justify-content: center;
+  }
+}
+@include respond(small) {
+  .service-container {
+    width: 90%;
+    flex-direction: column;
+  }
+  .wrapper {
+    width: 90%;
+    grid-template-columns: repeat(3,1fr) ;
+  }
+
+  .left-content {
+    width: 100%;
+    font-size: 15px;
+    line-height: 23px;
+  }
+
+  .right-content {
+    width: 100%;
+  }
+
+  .box-wrapper {
+    justify-content: center;
+  }
+}
+
+@include respond(medium) {
+  .service-container {
+    width: 90%;
+    flex-direction: column;
+  }
+  .wrapper {
+    width: 90%;
+    grid-template-columns: repeat(3,1fr) ;
+  }
+  .left-content {
+    width: 100%;
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .right-content {
+    width: 100%;
+  }
+
+  .box-wrapper {
+    justify-content: center;
+  }
+}
