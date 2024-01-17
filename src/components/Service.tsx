@@ -32,11 +32,11 @@ function Service() {
   const paket10 = "/img/service/Paket 10.png";
 
   return (
-    <section id="Unit" className={styles["container"]}>
-      <div className={styles["Unit-container"]}>
+    <section id="Service" className={styles["container"]}>
+      <div className={styles["service-container"]}>
         <div className={styles["left-content"]}>
           <h3 className={styles["content-title"]}>
-            Our <span> Trip</span>
+            Our<span>Trip</span>
           </h3>
         </div>
         <div className={styles["wrapper"]}>
